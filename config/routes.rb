@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :users
   resources :accounts
 
-  # root 'microposts#index'
+  root 'microposts#index'
 end

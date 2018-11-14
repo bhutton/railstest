@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 #
+User.create([{id: 1, name: 'fred', email: 'abc@def.com'}])
+Micropost.create([{content: 'test abc', user_id: 1}])

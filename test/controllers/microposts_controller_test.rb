@@ -40,6 +40,11 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to micropost_url(@micropost)
   end
 
+  test "should allow empty post" do
+    patch micropost_url(@micropost), params: { micropost: { content: nil, user_id: @micropost.user_id } }
+    assert_redirected_to micropost_url(@micropost)
+  end
+
   test "should destroy micropost" do
     assert_difference('Micropost.count', -1) do
       delete micropost_url(@micropost)
